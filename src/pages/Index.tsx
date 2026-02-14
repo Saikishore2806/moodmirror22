@@ -5,6 +5,7 @@ import EmotionalResponseCard from "@/components/EmotionalResponseCard";
 import LoadingState from "@/components/LoadingState";
 import ReflectionTimeline from "@/components/ReflectionTimeline";
 import MicroTools from "@/components/MicroTools";
+import ConnectionSection from "@/components/ConnectionSection";
 import QuoteOfTheDay from "@/components/QuoteOfTheDay";
 import PrivacyFooter from "@/components/PrivacyFooter";
 import type { AnalysisResult, ReflectionEntry } from "@/lib/types";
@@ -61,7 +62,12 @@ const Index = () => {
         <HeroSection />
         <ReflectionInput onSubmit={handleReflect} isLoading={isLoading} />
         {isLoading && <LoadingState />}
-        {result && !isLoading && <EmotionalResponseCard result={result} />}
+        {result && !isLoading && (
+          <>
+            <EmotionalResponseCard result={result} />
+            <ConnectionSection />
+          </>
+        )}
         <ReflectionTimeline entries={timeline} />
         <MicroTools />
         <QuoteOfTheDay />

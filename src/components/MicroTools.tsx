@@ -24,12 +24,12 @@ const MicroTools = () => {
   const tools = [
     {
       icon: Wind,
-      label: "30s Breathing",
+      label: "Reconnect with Yourself",
       onClick: startBreathing,
     },
     {
       icon: Heart,
-      label: "One Gratitude",
+      label: "Express Appreciation",
       onClick: () => {
         setGratitude("");
         setGratitudeSaved(false);
@@ -38,7 +38,7 @@ const MicroTools = () => {
     },
     {
       icon: Sparkles,
-      label: "Encouragement",
+      label: "Strengthen Inner Dialogue",
       onClick: () => {
         setEncouragementSent(false);
         setActiveModal("encourage");

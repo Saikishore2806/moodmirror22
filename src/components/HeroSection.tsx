@@ -5,10 +5,10 @@ const HeroSection = () => {
         MoodMirror
       </h1>
       <p className="text-xl sm:text-2xl font-light text-muted-foreground mb-3 animate-fade-in-delay opacity-0">
-        Pause. Reflect. Reconnect.
+        Technology that listens. Connection that heals.
       </p>
       <p className="text-sm text-muted-foreground/70 max-w-md mx-auto animate-fade-in-delay-2 opacity-0">
-        A private space for emotional clarity powered by AI.
+        Understanding your emotions helps you connect better with others.
       </p>
     </section>
   );
