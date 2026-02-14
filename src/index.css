@@ -102,6 +102,35 @@
       hsl(210 35% 96%) 100%
     );
     min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .gradient-bg::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: -10%;
+    width: 120%;
+    height: 60%;
+    background:
+      radial-gradient(ellipse 600px 200px at 20% 50%, hsl(var(--primary) / 0.04), transparent),
+      radial-gradient(ellipse 400px 300px at 80% 40%, hsl(var(--mood-positive) / 0.03), transparent);
+    pointer-events: none;
+    animation: float 12s ease-in-out infinite;
+  }
+
+  .gradient-bg::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    right: -5%;
+    width: 50%;
+    height: 80%;
+    background:
+      radial-gradient(ellipse 300px 400px at 60% 30%, hsl(var(--primary) / 0.03), transparent);
+    pointer-events: none;
+    animation: float 16s ease-in-out infinite reverse;
   }
 
   .mood-dot-positive {
