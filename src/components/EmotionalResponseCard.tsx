@@ -8,20 +8,14 @@ const moodConfig = {
   Positive: {
     dotClass: "mood-dot-positive",
     label: "Positive",
-    action: "Take a moment to write down one thing you're grateful for today.",
-    actionTitle: "Gratitude Reflection",
   },
   Neutral: {
     dotClass: "mood-dot-neutral",
     label: "Neutral",
-    action: "Pause for 10 seconds. Close your eyes. Take one deep breath.",
-    actionTitle: "Mindful Pause",
   },
   Negative: {
     dotClass: "mood-dot-negative",
     label: "Negative",
-    action: "Try box breathing: inhale 4s, hold 4s, exhale 4s, hold 4s. Repeat 3 times.",
-    actionTitle: "Breathing Guidance",
   },
 } as const;
 
@@ -49,13 +43,14 @@ const EmotionalResponseCard = ({ result }: EmotionalResponseCardProps) => {
 
         {/* Action */}
         <div className="bg-accent/50 rounded-xl p-4">
-          <p className="text-xs uppercase tracking-widest text-muted-foreground mb-1.5">{config.actionTitle}</p>
-          <p className="text-foreground/80 text-sm leading-relaxed">{config.action}</p>
+          <p className="text-xs uppercase tracking-widest text-muted-foreground mb-1.5">Suggested Action</p>
+          <p className="text-foreground/80 text-sm leading-relaxed">{result.action}</p>
         </div>
 
         {/* Affirmation */}
         {result.affirmation && (
           <div className="text-center pt-2">
+            <p className="text-xs uppercase tracking-widest text-muted-foreground mb-1.5">Affirmation</p>
             <p className="text-quote text-lg italic text-muted-foreground">"{result.affirmation}"</p>
           </div>
         )}
